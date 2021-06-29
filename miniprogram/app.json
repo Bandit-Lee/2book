@@ -1,18 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room"
+    "pages/homePage/homePage",
+    "pages/postBook/postBook",
+    "pages/myInfo/myInfo",
+    "pages/searchRes/searchRes"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -20,6 +11,30 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "云开发 QuickStart",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#dadada",
+    "selectedColor": "#09bb07",
+    "backgroundColor":"#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/主页2.png",  
+        "iconPath": "images/主页1.png", 
+        "pagePath": "pages/homePage/homePage",
+        "text": "首页"
+      },{
+        "selectedIconPath": "images/发布2.png",  
+        "iconPath": "images/发布1.png", 
+        "pagePath":  "pages/postBook/postBook",
+        "text": "发布"
+      },{
+        "selectedIconPath": "images/我的2.png",  
+        "iconPath": "images/我的1.png", 
+        "pagePath":  "pages/myInfo/myInfo",
+        "text": "我的"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"

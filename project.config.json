@@ -28,6 +28,7 @@
       "outputPath": ""
     },
     "enableEngineNative": false,
+    "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
@@ -37,7 +38,7 @@
     "minifyWXSS": true
   },
   "appid": "wx6dca4bde410e06ac",
-  "projectname": "%E4%B8%9C%E6%9E%97%E4%BA%8C%E6%89%8B%E4%B9%A6",
+  "projectname": "绿书",
   "libVersion": "2.14.1",
   "condition": {
     "search": {

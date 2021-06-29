@@ -1,0 +1,28 @@
+<!--pages/homePage/homePage.wxml-->
+<!-- 顶部搜索框 -->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <!-- 搜索框 -->
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input" bindblur="你的事件名" placeholder="绿书，搜你想要的书!" />
+    </view>
+  </view>
+  <!-- 搜索按钮,调用搜索查询方法 -->
+  <button class="weui-search-bar__cancel-btn" bindtap='searchBooks' size="mini">搜索</button>
+</view>
+
+<view class="home-i">
+<image class="home-image" src="https://img2.baidu.com/it/u=3824512792,2857528583&fm=26&fmt=auto&gp=0.jpg"></image>
+</view>
+
+<!-- 图书列表 -->
+<view class='case-page'>
+  <view class='list-masonry'>
+    <view class='item-masonry' wx:for="{{books}}" wx:key="key">
+      <image src='{{item.url}}' mode='widthFix'></image>
+      <text class="title">{{item.title}}\n</text>
+      <text class="price">￥6.99</text>
+    </view>
+  </view>
+</view>
