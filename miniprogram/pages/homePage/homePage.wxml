@@ -16,13 +16,33 @@
 <image class="home-image" src="https://img2.baidu.com/it/u=3824512792,2857528583&fm=26&fmt=auto&gp=0.jpg"></image>
 </view>
 
-<!-- 图书列表 -->
+<!--导航-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+
+<view hidden="{{currentTab!==0}}">
+<!-- 图书列表计算机 -->
 <view class='case-page'>
   <view class='list-masonry'>
-    <view class='item-masonry' wx:for="{{books}}" wx:key="key">
+    <view class='item-masonry' wx:for="{{books_jsj}}" wx:key="key">
       <image src='{{item.url}}' mode='widthFix'></image>
       <text class="title">{{item.title}}\n</text>
       <text class="price">￥6.99</text>
     </view>
   </view>
+</view>
+</view>
+
+<view hidden="{{currentTab!==1}}">
+<!-- 图书列表土木 -->
+  <view class='case-page'>
+  <view class='list-masonry'>
+    <view class='item-masonry' wx:for="{{books_tumu}}" wx:key="key">
+      <image src='{{item.url}}' mode='widthFix'></image>
+      <text class="title">{{item.title}}\n</text>
+      <text class="price">￥6.99</text>
+    </view>
+  </view>
+</view>
 </view>

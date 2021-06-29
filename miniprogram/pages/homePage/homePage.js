@@ -1,4 +1,5 @@
 // pages/home/home.js
+var app=getApp()
 Page({
 
   /**
@@ -6,6 +7,8 @@ Page({
    */
   data: {
     imgWidth: 0, imgHeight: 0,
+    navbar:["计算机","土木","机电","林学","经管","理学"],
+    currentTab:0,
     books: [
       {
         title: '示例图片',
@@ -43,8 +46,65 @@ Page({
       {
         title: '示例图片',
         url: 'http://img3.imgtn.bdimg.com/it/u=1417732605,3777474040&fm=26&gp=0.jpg'
-      }
+      },
+    ],
+    books_jsj:[
+      {
+        title:'汇编',
+        url:'../../images/计算机/汇编.jpg'
+      },
+      {
+        title:'计网',
+        url:'../../images/计算机/计网.jpg'
+      },
+      {
+        title:'计组',
+        url:'../../images/计算机/计组.jpg'
+      },
+      {
+        title:'算法',
+        url:'../../images/计算机/算法.jpg'
+      },
+      {
+        title:'嵌入式',
+        url:'../../images/计算机/嵌入式.jpg'
+      },
+      {
+        title:'HTML5',
+        url:'../../images/计算机/H5.jpeg'
+      },
+    ],
+    books_tumu:[
+      {
+        title:'爆破工程',
+        url:'../../images/土木/爆破工程.jpg'
+      },
+      {
+        title:'测量',
+        url:'../../images/土木/测量.jpg'
+      },
+      {
+        title:'混凝土结构',
+        url:'../../images/土木/混凝土结构.jpg'
+      },
+      {
+        title:'力学',
+        url:'../../images/土木/力学.jpg'
+      },
+      {
+        title:'土木施工',
+        url:'../../images/土木/土木施工.jpg'
+      },
+      {
+        title:'cad',
+        url:'../../images/土木/cad.jpg'
+      },
     ]
+  },
+  navbarTap:function(e){
+    this.setData({
+      currentTab:e.currentTarget.dataset.idx
+    })
   },
 
   /**
