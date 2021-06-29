@@ -1,2 +1,41 @@
-<!--pages/postBook/postBook.wxml-->
-<text>pages/postBook/postBook.wxml</text>
+<view class="top-view">
+  <van-steps steps="{{ steps }}" active='0' active-color="#000000" />
+</view>
+<view class="all">
+  <!--书籍名称-->
+  <view class="information-little">
+    <text>书籍名称</text>
+    <form>
+      <input type="string" placeholder="请输入书籍名称" maxlength="20"></input>
+    </form>
+  </view>
+  <view class="divLine"></view>
+  <!--所属科目-->
+  <view class="information-two">
+    <text>所属科目</text>
+    <picker mode='selector' range='{{selectorItems}}' bindchange='selectorChange'>
+      <view>当前选择: {{selector}}</view>
+    </picker>
+  </view>
+  <view class="divLine"></view>
+  <!--取货方式-->
+  <view class="information-three">
+    <pre>取货方式：
+
+</pre>
+    <radio-group>
+      <radio value="送货上门">送货上门</radio>
+      <radio value="买家自取">买家自取</radio>
+    </radio-group>
+  </view>
+  <view class="divLine"></view>
+  <!--出售数量-->
+  <view class="information-four">
+  <text>选择出售数量</text>
+  <view class="information-four-son">
+    <button class="jianhao" disabled="{{minusStatus}}" plain='ture' bindtap='minusNum'>-</button>
+　　<input type='number' value='{{courseCount}}' placeholder="数量"></input>
+　　<button id="加号" plain='ture' bindtap='addNum'>+</button>
+  </view>
+  </view>
+</view>

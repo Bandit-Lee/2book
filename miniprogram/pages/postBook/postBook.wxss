@@ -1,1 +1,29 @@
 /* pages/postBook/postBook.wxss */
+.information-little{
+ background-color: white;
+ width: 100%;
+ justify-content: center;
+}
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+ }
+.all{
+  background-color: white;
+}
+input{
+  background-color: rgb(218, 215, 215);
+  background-position: 20vh;
+  min-width: 50;
+  width: 50;
+}
+.jianhao{
+  width: 10vh;
+  height: 10vh;
+}
+.information-four-son{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
