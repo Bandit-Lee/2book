@@ -13,6 +13,7 @@ Page({
     array:[0,1,2,3,4,5],
     currentTab:'计算机',
     book_id:'',
+    show_img:'',
   },
   navbarTap:function(e){
     this.setData({
@@ -37,8 +38,9 @@ Page({
       success:function(res){
         that.setData({
           zong:res.result.data,
+          show_img:that.data.zong[0]
         })
-        console.log(that.data.zong)
+        console.log(that.data.show_img)
       },fail:function(res){
         console.log(res)
       }

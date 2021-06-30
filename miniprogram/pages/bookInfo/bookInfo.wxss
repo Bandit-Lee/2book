@@ -1,1 +1,39 @@
-/* pages/bookInfo/bookInfo.wxss */
+/* pages/order/order.wxss */
+ 
+page {
+  background-color: #f1f1f1;
+}
+.product{
+  white-space: nowrap;
+}
+
+.product .img{
+  text-align: center;
+  width: 98%;
+  border: 1px solid rgb(255, 230, 0);
+  display: inline-block;
+}
+
+.case-page{
+  padding:20rpx;
+}
+.item-masonry{
+  background-color: #fff;
+  break-inside: avoid;/*避免在元素内部插入分页符*/
+  box-sizing: border-box; 
+  padding: 20rpx;
+  margin-bottom:20rpx;
+  border-radius: 0.5em;
+}
+.item-masonry image {
+  width: 100%;
+}
+
+.name{
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.price{
+  color: red;
+}

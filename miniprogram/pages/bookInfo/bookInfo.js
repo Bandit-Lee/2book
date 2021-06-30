@@ -8,6 +8,11 @@ Page({
     id:'',
     zong2:'',
   },
+  buy:function(e){
+    wx.showToast({
+      title: '购买成功',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
