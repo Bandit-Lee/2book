@@ -1,2 +1,29 @@
 <!--pages/searchRes/searchRes.wxml-->
-<text>pages/searchRes/searchRes.wxml</text>
+<!-- 顶部搜索框 -->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <!-- 搜索框 -->
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text"  bindinput="feedBackInput" class="weui-search-bar__input" focus='{true}' placeholder="绿书，搜你想要的书!" />
+    </view>
+  </view>
+  <!-- 搜索按钮,调用搜索查询方法 -->
+  <button class="weui-search-bar__cancel-btn" bindtap='search' size="mini">搜索</button>
+</view>
+
+<!-- 搜索结果展示区 -->
+<view class='case-page'>
+  <view class='list-masonry'>
+    <view wx:if="{{search_list.length==0}}">
+        <text>空空如也……</text>
+   </view>
+    <view wx:else>
+      <view class='item-masonry' wx:for="{{search_list}}" wx:key="key"  data-idx="{{item._id}}" bindtap="toDetail">
+      <image src='{{item.imgurl}}' mode='widthFix'></image>
+      <text>{{item.bookname}}</text>
+    </view>
+    </view>
+  </view>
+</view>
+

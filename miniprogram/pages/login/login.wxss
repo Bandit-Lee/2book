@@ -1,4 +1,8 @@
 /* pages/login/login.wxss */
+page{
+  background-image: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201608%2F20%2F20160820133459_CHuUB.thumb.700_0.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626147656&t=cccf9de209217ea484965e5b25b891fc");
+  background-size: 100% 100%;
+}
 button{
   top: 700rpx;
 }

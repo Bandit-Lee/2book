@@ -45,9 +45,9 @@ page{
 }
 /* 输入框高度与字体大小 */
 .weui-search-bar__input {
-  height: 28px;
-  line-height: 28px;
-  font-size: 14px;
+  height: 28prx;
+  line-height: 28prx;
+  font-size: 14prx;
 }
 
 /* 搜索按钮 */

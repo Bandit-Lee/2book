@@ -1,1 +1,82 @@
 /* pages/searchRes/searchRes.wxss */
+page{
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.weui-search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color:#04BE02;
+  /* border-top: 1rpx solid #D7D6DC; */
+  border-bottom: 1rpx solid #D7D6DC;
+}
+
+/* 搜索框前的放大镜图标 */
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  border-radius: 25px;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+/* 输入框高度与字体大小 */
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+/* 搜索按钮 */
+.weui-search-bar__cancel-btn {
+      background-color: white;
+      border-radius: 25px;
+      border: 1rpx solid #E6E6EA;
+}
+
+/* 图书列表 */
+.case-page{
+  padding:20rpx;
+}
+.list-masonry{
+  column-count: 2;
+  column-gap: 20rpx;
+}
+.item-masonry{
+  background-color: #fff;
+  break-inside: avoid;/*避免在元素内部插入分页符*/
+  box-sizing: border-box; 
+  padding: 20rpx;
+  margin-bottom:20rpx;
+  border-radius: 0.5em;
+}
+.item-masonry image {
+  width: 100%;
+}
+
+.price{
+  color: red;
+}

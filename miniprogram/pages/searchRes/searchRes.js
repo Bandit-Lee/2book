@@ -1,66 +1,52 @@
-// pages/searchRes/searchRes.js
+const db = wx.cloud.database();//初始化数据库
 Page({
+  data:{
+    searchKey:'',//记录输入的查询字段
+    search_list:[],
+   },
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+   feedBackInput(e) {//输入框输入数据
+    this.setData({
+      searchKey: e.detail.value//赋值
+    })
+   },
+   search: function () {
+    //连接数据库
+    if(!this.data.searchKey){
+      wx.showToast({
+        title: '还没输入书名呢……',
+        icon: 'none',
+        duration: 2000
+        }) 
+    }else{
+      const db = wx.cloud.database()
+    var that = this
+    db.collection('fabujilu').where({
+      //使用正则查询，实现对搜索的模糊查询
+      bookname: db.RegExp({
+        regexp: '.*' + that.data.searchKey,
+        //从搜索栏中获取的value作为规则进行匹配。
+        options: 'i',
+        //大小写不区分
+      }),
+    }).get({
+      success: res => {
+        console.log(res)
+        console.log(that.data.searchKey)
+        that.setData({
+          search_list: res.data,
+        })
+        console.log(this.data.search_list)
+      }
+    })
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  toDetail:function(e){
+    wx.navigateTo({
+      url: '../bookInfo/bookInfo',
+    })
+    this.setData({
+      book_id:e.currentTarget.dataset.idx,
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+  })
