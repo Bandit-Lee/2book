@@ -1,5 +1,5 @@
 <view class="top-view">
-  <van-steps steps="{{ steps }}" active='0' active-color="#000000" />
+  <van-steps steps="{{ steps }}" active="{{active_step}}" active-color="#000000" />
 </view>
 <view class="all">
   <!--书籍名称-->
@@ -29,6 +29,13 @@
     </radio-group>
   </view>
   <view class="divLine"></view>
+  <!--出售价格-->
+  <view class="information-price">
+    <text>出售价格</text>
+    <form>
+      <input type="number" placeholder="输入价格" maxlength="20" bindinput="setprice"></input>
+    </form>
+  </view>
   <!--出售数量-->
   <view class="information-four">
   <text>选择出售数量</text>
@@ -39,6 +46,7 @@
   </view>
   </view>
   <!--上传图片-->
+  
   <view class="information-five">
       <button bindtap='chooseImageTap'>上传图片</button>
   </view>

@@ -1,6 +1,8 @@
 // pages/postBook/postBook.js
 Page({
   data: {
+    price: 0,
+    active_step: 0,
     fangshi: '默认',
     username: ' ',
     bookname: '默认',
@@ -14,12 +16,15 @@ Page({
         text: '填写图书信息'
       },
       {
-        text: '填写联系方式'
+        text: '发布完成'
       }
     ],
     selectorItems: ['计算机', '土木工程', '机电', '林学', '经济管理', '理学']
   },
   //获取填写的信息
+  setprice(e){
+    this.setData({price: e.detail.value})
+  },
   setbookname(e) {
     this.setData({ bookname: e.detail.value })
   },
@@ -28,6 +33,7 @@ Page({
   },
   //提交信息
   submit() {
+    this.setData({active_step: 1})
     // 云函数入口文件
     const db = wx.cloud.database()
     //获取缓存中的用户名
@@ -41,7 +47,8 @@ Page({
         getfangshi: this.data.fangshi,
         subject: this.data.selector,
         imgurl: this.data.imgURL,
-        username: this.data.username
+        username: this.data.username,
+        price: this.data.price
       },
       success(res) {
         console.log("提交成功", res);
@@ -49,6 +56,10 @@ Page({
       fail(err) {
         console.log("失败", err);
       }
+    })
+    wx.showToast({
+      title: '发布成功',
+      duration: 1000
     })
   },
   //添加上传图片
