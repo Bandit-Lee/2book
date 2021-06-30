@@ -5,14 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    id:'',
+    zong2:'',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var pages = getCurrentPages();
+    var prepage = pages[pages.length-2];
+    this.setData({
+        id:prepage.data.book_id,
+    })
+    console.log(this.data.id)
+    let that = this;
+    wx.cloud.callFunction({
+      name:'funcquery',
+      success:function(res){
+        that.setData({
+          zong2:res.result.data,
+        })
+        console.log(that.data.zong2)
+      },fail:function(res){
+        console.log(res)
+      }
+    })
   },
 
   /**

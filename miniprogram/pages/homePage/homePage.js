@@ -10,27 +10,31 @@ Page({
     zong:[],
     imgWidth: 0, imgHeight: 0,
     navbar:["计算机","土木","机电","林学","经管","理学"],
-    currentTab:0,
+    array:[0,1,2,3,4,5],
+    currentTab:'',
+    book_id:'',
   },
   navbarTap:function(e){
     this.setData({
       currentTab:e.currentTarget.dataset.idx
     })
   },
-
+  toDetail:function(e){
+    wx.navigateTo({
+      url: '../bookInfo/bookInfo',
+    })
+    this.setData({
+      book_id:e.currentTarget.dataset.idx,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    /*db.collection('book').get().then(res => {
-      // res.data 包含该记录的数据
-      console.log(res.data)
-    })*/
     let that = this;
     wx.cloud.callFunction({
       name:'funcquery',
       success:function(res){
-        console.log(res.data)
         that.setData({
           zong:res.result.data,
         })

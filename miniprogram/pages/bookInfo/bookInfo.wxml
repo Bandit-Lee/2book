@@ -1,2 +1,9 @@
 <!--pages/bookInfo/bookInfo.wxml-->
-<text>pages/bookInfo/bookInfo.wxml</text>
+<view wx:for="{{zong2}}">
+  <view wx:if="{{item._id==id}}">
+    <image src='{{item.imgurl}}' mode='widthFix'></image>
+  <view>{{item.bookname}}</view>
+  <view>{{item.subject}}</view>
+  <view>{{item.getfangshi}}</view>
+  </view>
+</view>
