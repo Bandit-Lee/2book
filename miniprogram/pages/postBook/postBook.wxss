@@ -27,3 +27,21 @@ input{
   flex-direction: row;
   background-color: white;
 }
+image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.imglist{
+display: flex;
+}
+.item{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.shanchu{
+  width: 50rpx;
+  height: 50rpx;
+  right: -20rpx;
+  top: -20rpx;
+}
