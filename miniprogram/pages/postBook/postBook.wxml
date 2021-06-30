@@ -6,7 +6,7 @@
   <view class="information-little">
     <text>书籍名称</text>
     <form>
-      <input type="string" placeholder="请输入书籍名称" maxlength="20"></input>
+      <input type="string" placeholder="请输入书籍名称" maxlength="20" bindinput="setbookname"></input>
     </form>
   </view>
   <view class="divLine"></view>
@@ -23,7 +23,7 @@
     <pre>取货方式：
 
 </pre>
-    <radio-group>
+    <radio-group bindchange="setfangshi">
       <radio value="送货上门">送货上门</radio>
       <radio value="买家自取">买家自取</radio>
     </radio-group>
@@ -37,5 +37,12 @@
 　　<input type='number' value='{{courseCount}}' placeholder="数量"></input>
 　　<button id="加号" plain='ture' bindtap='addNum'>+</button>
   </view>
+  </view>
+  <!--上传图片-->
+  <view class="information-five">
+      <button bindtap='chooseImageTap'>上传图片</button>
+  </view>
+  <view class="information-last">
+  <button bindtap="submit">发布</button>
   </view>
 </view>
