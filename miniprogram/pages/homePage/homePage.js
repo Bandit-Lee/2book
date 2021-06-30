@@ -11,7 +11,7 @@ Page({
     imgWidth: 0, imgHeight: 0,
     navbar:["计算机","土木","机电","林学","经管","理学"],
     array:[0,1,2,3,4,5],
-    currentTab:'',
+    currentTab:'计算机',
     book_id:'',
   },
   navbarTap:function(e){

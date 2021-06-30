@@ -5,7 +5,7 @@
     <!-- 搜索框 -->
     <view class="weui-search-bar__box">
       <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-      <input type="text" class="weui-search-bar__input" bindblur="你的事件名" placeholder="绿书，搜你想要的书!" />
+      <input type="text"  class="weui-search-bar__input" bindfocus="searchBooks" placeholder="绿书，搜你想要的书!" />
     </view>
   </view>
   <!-- 搜索按钮,调用搜索查询方法 -->
