@@ -25,24 +25,11 @@
 <!-- 图书列表计算机 -->
 <view class='case-page'>
   <view class='list-masonry'>
-    <view class='item-masonry' wx:for="{{books_jsj}}" wx:key="key">
-      <image src='{{item.url}}' mode='widthFix'></image>
-      <text class="title">{{item.title}}\n</text>
-      <text class="price">￥6.99</text>
+    <view class='item-masonry' wx:for="{{zong}}" wx:key="key">
+      <image src='{{item.imgurl}}' mode='widthFix'></image>
+      <text>{{item.bookname}}</text>
     </view>
   </view>
 </view>
 </view>
 
-<view hidden="{{currentTab!==1}}">
-<!-- 图书列表土木 -->
-  <view class='case-page'>
-  <view class='list-masonry'>
-    <view class='item-masonry' wx:for="{{books_tumu}}" wx:key="key">
-      <image src='{{item.url}}' mode='widthFix'></image>
-      <text class="title">{{item.title}}\n</text>
-      <text class="price">￥6.99</text>
-    </view>
-  </view>
-</view>
-</view>
