@@ -22,13 +22,13 @@
     bindtap="navbarTap">{{item}}</text>
 </view>
 
-<view wx:for="{{navbar}}" wx:for-item="i" hidden="{{currentTab!==i}}">
+<view wx:for="{{navbar}}" wx:key="key" wx:for-item="i" hidden="{{currentTab!==i}}">
   <!-- 图书列表 -->
   <view class='case-page'>
     <view class='list-masonry'>
-      <view class='item-masonry' wx:for="{{zong}}" wx:if="{{item.subject==i}}" data-idx="{{item._id}}" wx:key="key" bindtap="toDetail">
+      <view class='item-masonry' wx:for="{{zong}}" wx:key="key" wx:if="{{item.subject==i}}" data-idx="{{item._id}}"  bindtap="toDetail">
         <view>
-          <view wx:for="{{item.imgurl}}" wx:for-index="index" wx:if="{{index<1}}">
+          <view wx:for="{{item.imgurl}}" wx:key="key" wx:for-index="index" wx:if="{{index<1}}">
             <image src='{{item}}' mode='widthFix'></image>
           </view>
           <view>{{item.bookname}}</view>

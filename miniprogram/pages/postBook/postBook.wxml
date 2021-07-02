@@ -1,5 +1,5 @@
 <view class="top-view">
-  <van-steps steps="{{ steps }}" active="{{active_step}}" active-color="#000000" />
+  <van-steps steps="{{ steps }}" active="{{active_step}}" active-color="#011111" />
 </view>
 <view class="thewhole">
 <view class="bookinformation">
@@ -12,7 +12,7 @@
     <image src="../postBook/images/书.png" style="width: 80rpx;height: 80rpx"></image>
   </view>
   <view class="divLine"></view>
-  <!--所属科目--> 
+  <!--所属科目-->
   <view class="information-two">
     <text>所属科目</text>
     <picker mode='selector' range='{{selectorItems}}' bindchange='selectorChange' style="background: rgb(238, 238, 238);">
@@ -57,60 +57,24 @@
     <image src="../postBook/images/待送货订单-变.png" style="width: 80rpx;height: 80rpx"></image>
   </view>
   <view class="divLine"></view>
-
   <!--联系方式-->
   <view class="connect">
-  <text>联系方式</text>
-  <input type="string" placeholder="输入手机号码/微信/qq" bindinput="setconnect"></input>
-  </view>
-  <view class="divLine"></view>
-
-  <!--联系方式-->
-  <view class="connect">
-  <text>联系方式</text>
-  <input type="string" placeholder="输入手机号码/微信/qq" bindinput="setconnect"></input>
-  </view>
-  <view class="divLine"></view>
-
-  <!--出售价格-->
-  <view class="information-price">
-    <text>出售价格</text>
-    <form>
-      <input type="number" placeholder="输入价格" maxlength="20" bindinput="setprice"></input>
-    </form>
-  </view>
-  <!--出售数量-->
-  <view class="information-four">
-    <text>选择出售数量</text>
-    <view class="information-four-son">
-      <button class="jianhao" disabled="{{minusStatus}}" plain='ture' bindtap='minusNum'>-</button>
-      　　<input type='number' value='{{courseCount}}' placeholder="数量"></input>
-      　　<button id="加号" plain='ture' bindtap='addNum'>+</button>
-    </view>
+    <text>联系方式</text>
+    <input type="string" placeholder="输入手机号码/微信/qq" bindinput="setconnect" class="b_plecebox"></input>
   </view>
   <view class="divLine"></view>
   <!--上传图片-->
-
   <view class="txt">上传图片</view>
-    <view class="imglist">
-      <view class="item" wx:for="{{imgbox}}" wx:key="item">
-        <image src="{{item}}" alt=""></image>
-        <view class='delete' data-index="{{index}}">
-          <image src="../postBook/images/删除.png" class="shanchu" bindtap='deleteImg'></image>
-        </view>
+  <view class="imglist">
+    <view class="item" wx:for="{{imgbox}}" wx:key="item">
+      <image src="{{item}}" alt=""></image>
+      <view class='delete' data-index="{{index}}">
+        <image src="../postBook/images/删除.png" class="shanchu" bindtap='deleteImg'></image>
       </view>
-      <view class="last-item" wx:if="{{imgbox.length >= 3 ? false : true}}" bindtap="addImage">
-        <image src="../postBook/images/添加图片.jpg"></image>
-      </view>
-
-  </view>
-
-
-  <!--<view class="information-five">
-      <button bindtap='chooseImageTap'>上传图片</button>
-  </view>-->
-  <view class="information-last">
-    <button bindtap="submit">发布</button>
+    </view>
+    <view class="last-item" wx:if="{{imgbox.length >= 3 ? false : true}}" bindtap="addImage">
+      <image src="../postBook/images/添加图片.jpg"></image>
+    </view>
   </view>
 </view>
 <view class="information-last">
