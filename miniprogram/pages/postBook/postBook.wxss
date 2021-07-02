@@ -1,27 +1,27 @@
 /* pages/postBook/postBook.wxss */
 .information-little{
- background-color: white;
- width: 100%;
- justify-content: center;
+  width: 100%;
+  padding: 10rpx;
+  display: flex;
+  box-sizing: border-box;
 }
 .divLine{
   background: #E0E3DA;
   width: 100%;
   height: 5rpx;
  }
-.all{
-  background-color: white;
-}
+
 input{
-  background-color: rgb(218, 215, 215);
-  background-position: 20vh;
-  min-width: 50;
-  width: 50;
+  width: 100%;
+  height: 80rpx;
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background: rgb(238, 238, 238);
 }
-.jianhao{
-  width: 10vh;
-  height: 10vh;
-}
+
 .information-four-son{
   display: flex;
   flex-direction: row;
@@ -44,4 +44,55 @@ display: flex;
   height: 50rpx;
   right: -20rpx;
   top: -20rpx;
+}
+.jianhao{
+  width: 80rpx;
+  height: 80rpx;
+  padding:0%;
+  border: none;
+}
+.fuhaoimg{
+  width: 75rpx;
+  height: 75rpx;
+}
+.person-information {
+  width: 410rpx;
+  height: 250rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.information-price {
+  width: 100%;
+  padding: 10rpx;
+  display: flex;
+  box-sizing: border-box;
+}
+.b_plecebox {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 20rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background: rgb(238, 238, 238);
+}
+.contact {
+  width: 100%;
+  padding: 10rpx;
+  display: flex;
+  box-sizing: border-box;
+}
+.thewhole{
+  display: flex;
+  flex-direction: column;
+  
+  font-family: lisu;
+  padding: 2vh;
+}
+.fabuimg{
+  width: 100rpx;
+  height: 100rpx;
+  
 }
