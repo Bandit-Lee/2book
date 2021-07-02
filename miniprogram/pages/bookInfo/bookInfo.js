@@ -7,10 +7,14 @@ Page({
   data: {
     id:'',
     zong2:'',
+    buy_info:'',
   },
   buy:function(e){
     wx.showToast({
       title: '购买成功',
+    })
+    this.setData({
+      buy_info:'交易中'
     })
   },
 
@@ -42,6 +46,9 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.setData({
+      buy_info:'购买'
+    })
 
   },
 
