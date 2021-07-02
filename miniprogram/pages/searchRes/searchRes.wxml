@@ -5,7 +5,8 @@
     <!-- 搜索框 -->
     <view class="weui-search-bar__box">
       <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-      <input type="text"  bindinput="feedBackInput" class="weui-search-bar__input" focus='{true}' placeholder="绿书，搜你想要的书!" />
+      <input type="text" bindinput="feedBackInput" class="weui-search-bar__input" focus='{true}'
+        placeholder="绿书，搜你想要的书!" />
     </view>
   </view>
   <!-- 搜索按钮,调用搜索查询方法 -->
@@ -13,17 +14,18 @@
 </view>
 
 <!-- 搜索结果展示区 -->
-<view class='case-page'>
-  <view class='list-masonry'>
-    <view wx:if="{{search_list.length==0}}">
-        <text>空空如也……</text>
-   </view>
-    <view wx:else>
-      <view class='item-masonry' wx:for="{{search_list}}" wx:key="key"  data-idx="{{item._id}}" bindtap="toDetail">
-      <image src='{{item.imgurl}}' mode='widthFix'></image>
-      <text>{{item.bookname}}</text>
-    </view>
+<view wx:if="{{search_list.length==0}}">
+  <view>
+    <image class="noResult" src='../../images/暂无内容.png' mode='widthFix' style="width: 750rpx; height: 736rpx; display: inline-block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></image>
+  </view>
+</view>
+<view wx:else>
+  <view class='case-page'>
+    <view class='list-masonry'>
+      <view class='item-masonry' wx:for="{{search_list}}" wx:key="key" data-idx="{{item._id}}" bindtap="toDetail">
+        <image src='{{item.imgurl}}' mode='widthFix'></image>
+        <text>{{item.bookname}}</text>
+      </view>
     </view>
   </view>
 </view>
-

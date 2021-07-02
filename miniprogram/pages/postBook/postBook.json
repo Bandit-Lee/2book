@@ -1,3 +1,4 @@
 {
-  "usingComponents": {"van-steps":"/miniprogram_npm/vant-weapp/steps"}
+  "usingComponents": {"van-steps":"/miniprogram_npm/vant-weapp/steps"},
+  "navigationBarTitleText": "发布订单"
 }

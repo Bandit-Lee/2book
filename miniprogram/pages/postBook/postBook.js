@@ -173,33 +173,43 @@ Page({
       }
     })
   },
-  //图片本地路径
-  chooseWxImage: function (type) {
-    var that = this;
-    var imgsPaths = that.data.imgs;
-    wx.chooseImage({
-      sizeType: ['original', 'compressed'],
-      sourceType: [type],
-      success: function (res) {
-        console.log(res.tempFilePaths[0]);
-        that.uploadImage(res.tempFilePaths[0], 0) //调用上传方法
-      }
+  //提交信息
+  submit() {
+    
+    //上传图片到云存储
+    console.log('总图片数量：'+this.data.imgbox.length)
+    let promiseArr = [];
+    wx.showLoading({
+      title: '图片上传中',
+      mask: true,
     })
-  },
-  //上传云存储并获取url
-  uploadImage(fileURL) {
-    wx.cloud.uploadFile({
-      cloudPath: new Date().getTime() + '.png', // 上传至云端的路径
-      filePath: fileURL, // 小程序临时文件路径
-      success: res => {
-        // 返回文件 ID
-        console.log("上传成功", res)
-        //获取文件路径
-        this.setData({
-          imgURL: res.fileID
+    this.setData({again:false})
+    for (let i = 0; i < this.data.imgbox.length; i++) {
+      promiseArr.push(new Promise((reslove, reject) => {
+        let item = this.data.imgbox[i];
+        let suffix = /\.\w+$/.exec(item)[0]; //正则表达式返回文件的扩展名
+        wx.cloud.uploadFile({
+          cloudPath: new Date().getTime() + suffix, // 上传至云端的路径
+          filePath: item, // 小程序临时文件路径
+          success: res => {
+            this.setData({
+              imgURL: this.data.imgURL.concat(res.fileID)
+            });
+            console.log(this.data.imgURL)
+            console.log(res.fileID) //输出上传后图片的返回地址
+            reslove();
+          },
+          fail: res => {
+            wx.hideLoading();
+            wx.showToast({
+              title: "上传失败",
+            })
+          }
         })
-      },
-      fail: console.error
+      }));
+    }
+    Promise.all(promiseArr).then(res => {
+      this.uploadAll();
     })
   },
 
