@@ -1,10 +1,7 @@
 // pages/postBook/postBook.js
 var utils = require('../postBook/util.js');
-const db = wx.cloud.database();
 Page({
   data: {
-    bookstatus: 'notbuy',
-    again: true,
     connect:'',
     showImg: '',
     nowtime: '1',
@@ -143,8 +140,7 @@ Page({
         connect: this.data.connect,
         username: this.data.username,
         price: this.data.price,
-        time: this.data.nowtime,
-        bookstatus: this.data.bookstatus
+        time: this.data.nowtime
       },
       success(res) {
         console.log("提交成功", res);
