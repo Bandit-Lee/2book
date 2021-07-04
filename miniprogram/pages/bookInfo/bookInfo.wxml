@@ -3,12 +3,13 @@
   <view class='item-masonry'>
     <view wx:for="{{zong2}}" wx:key="key" class="product">
       <view wx:if="{{item._id==id}}">
-        <scroll-view scroll-x="true">
-          <view wx:for="{{item.imgurl}}" wx:key="key" class="img" scroll-x="true">
+        <swiper style="height:500rpx" indicator-dots="true">
+          <swiper-item wx:for="{{item.imgurl}}" wx:key="key" class="img" style="height:500rpx">
             <image src='{{item}}' mode='widthFix'></image>
-          </view>
-        </scroll-view>
+          </swiper-item>
+        </swiper>
         <view class="info">
+          <view class="divline"></view>
           <view class="name">{{item.bookname}}</view>
           <view class="divline"></view>
           <view class="price">￥{{item.price}}</view>

@@ -9,8 +9,7 @@ page {
 
 .product .img{
   text-align: center;
-  width: 98%;
-  border: 1px solid rgb(255, 230, 0);
+  width: 100%;
   display: inline-block;
 }
 

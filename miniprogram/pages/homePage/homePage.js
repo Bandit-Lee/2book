@@ -34,13 +34,12 @@ Page({
   onLoad: function (options) {
     let that = this;
     wx.cloud.callFunction({
-      name:'funcquery',
+      name:'funcquery2',
       success:function(res){
         that.setData({
           zong:res.result.data,
-          show_img:that.data.zong[0]
         })
-        console.log(that.data.show_img)
+        console.log(res.result.data)
       },fail:function(res){
         console.log(res)
       }
