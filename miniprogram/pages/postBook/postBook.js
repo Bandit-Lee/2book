@@ -26,7 +26,7 @@ Page({
         text: '发布完成'
       }
     ],
-    selectorItems: ['计算机', '土木工程', '机电', '林学', '经济管理', '理学']
+    selectorItems: ['计算机', '土木', '机电', '林学', '经管', '理学']
   },
 
   
@@ -129,7 +129,8 @@ Page({
         username: this.data.username,
         price: this.data.price,
         time: this.data.nowtime,
-        bookstatus: this.data.bookstatus
+        bookstatus: this.data.bookstatus,
+        buy_openid:''
       },
       success(res) {
         console.log("提交成功", res);

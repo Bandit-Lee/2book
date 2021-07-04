@@ -17,7 +17,8 @@ Page({
     let that = this;
     db.collection('fabujilu').doc(this.data.id).update({
       data:{
-        bookstatus:"alreadybuy"
+        bookstatus:"alreadybuy",
+        buy_openid:wx.getStorageSync('openid')
       },
       success:function(res){
         console.log(that.data.id)

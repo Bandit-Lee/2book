@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    zong:[],
+    openid:''
   },
   scrollToRed:function(e)
   {
@@ -33,9 +34,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      openid: wx.getStorageSync('openid')
+    })
+    console.log(this.data.openid)
     let that = this;
     wx.cloud.callFunction({
-      name:'funcquery2',
+      name:'order',
       success:function(res){
         that.setData({
           zong:res.result.data,

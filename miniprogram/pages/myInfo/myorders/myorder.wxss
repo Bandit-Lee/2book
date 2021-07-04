@@ -1,5 +1,5 @@
 /* pages/costlist/costlist.wxss */
-view {
+.order {
   background: rgb(53, 233, 233);
   border: solid 10px rgb(234, 240, 234);
   color: rgb(15, 13, 13);
