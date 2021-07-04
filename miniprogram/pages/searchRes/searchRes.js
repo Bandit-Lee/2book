@@ -23,6 +23,7 @@ Page({
     var that = this
     db.collection('fabujilu').where({
       //使用正则查询，实现对搜索的模糊查询
+      bookstatus: 'notbuy',
       bookname: db.RegExp({
         regexp: '.*' + that.data.searchKey,
         //从搜索栏中获取的value作为规则进行匹配。
@@ -37,6 +38,13 @@ Page({
           search_list: res.data,
         })
         console.log(this.data.search_list)
+        if(this.data.search_list==''){
+          wx.showToast({
+            title: '抱歉，搜索结果为空！',
+            icon: 'none',
+            duration: 2000
+            }) 
+        }
       }
     })
     }
