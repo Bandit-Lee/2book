@@ -1,0 +1,33 @@
+<!--pages/question.wxml-->
+<view class='help-wrapper'>
+
+<text class='title'>
+怎么联系卖家？
+</text>
+<text class='body'>
+  成功付款后，订单中可以看到卖家联系方式，主动联系卖家可以更快的拿到书。注意：“扒书自营”的书籍需要发快递，可以不用联系卖家，会自动发货。
+</text>
+<view class="divLineX"></view>
+<text class="title">
+书的内容是什么？可不可以拍一下照片？这本书适用于什么专业？
+</text>
+<text class="body">
+  书籍的库存数量种类繁多，涉及的学科专业多种多样，拍照或提供书籍内容等操作十分繁琐，且不利于库存管理，因此请自行确定是否是所需书籍，客服将不会提供内容或图片等信息。
+</text>
+<view class="divLineX"></view>
+<text class="title">
+注意事项
+</text>
+<text class="body">
+  如果有人买书请记得及时交付，如果被退款过多，平台可能会下架你的所有在售书籍，甚至会加入黑名单！
+</text>
+<view class="divLineX"></view>
+<text class="title">
+怎么查快递信息？
+</text>
+<text class="body">
+  先自行查询快递信息，获取到快递的联系方式，并与快递联系、沟通、解决。如果问题不能自行解决，请与客服联系，由客服为您处理。
+</text>
+<view class="divLineX"></view>
+
+</view>

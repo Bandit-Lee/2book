@@ -1,0 +1,11 @@
+.mycommits {
+  background: rgb(242, 250, 242);
+  padding: 25px 0;
+  margin: 0 auto;
+  text-align:left;
+  font-weight:bold;
+}
+
+
+
+

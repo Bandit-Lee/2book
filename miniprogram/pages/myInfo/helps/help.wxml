@@ -1,14 +1,11 @@
 
 <!--pages/user/user.wxml-->
-<view class="mine-wrapper">
-  <view class="avatar-wrapper">
+<view class="helps-wrapper">
+  <view class="jiemian-wrapper">
     <view>
-      <view class="avatar">
-        <image style="border-radius:50%;" src="{{userInfo.avatarUrl}}"></image>
-      </view>
-      <view class="login">
-      <text>{{userInfo.nickName}}</text>
-      </view>
+      <view class="jiemian">
+      <image src="../miniprogram/images/帮助.png"></image>
+    </view>
     </view>
   </view>
   <view class="list-wrapper">
@@ -17,7 +14,9 @@
         <navigator url="{{item.url}}" class="lists">
         <view class='content'>
           <view class="listimg">
-            <image src="{{item.icon}}"></image>
+            <image src="{{item.icon}}">
+              <text style="position:relative;"></text>
+              </image>
           </view>
           <view class="listtext">{{item.text}}</view>
           <view class="listicon">{{item.tips}}</view>

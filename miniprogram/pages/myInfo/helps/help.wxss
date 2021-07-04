@@ -1,21 +1,22 @@
-.avatar-wrapper {
-  background: green;
+/* pages/user/user.wxss */
+.jiemian-wrapper {
+  background: #ebeaaa;
   padding: 25px 0;
 }
  
-.avatar-wrapper .avatar {
+.jiemian-wrapper .jiemian {
   margin: 0 auto;
   text-align: center;
 }
  
-.avatar-wrapper .avatar image {
+.jiemian-wrapper .jiemian image {
   width: 100px;
   height: 100px;
 }
  
-.avatar-wrapper .text {
+.jiemian-wrapper .text {
   text-align: center;
-  color: green;
+  color: rgb(31, 30, 30);
 }
  
 .listimg image {
@@ -33,7 +34,7 @@
  
 /*分割线样式*/
 .divLine{
- background: green;
+ background: #f3e1e1;
  width: 100%;
  height: 5rpx;
 }
@@ -45,10 +46,4 @@
   margin-left: 500rpx;
 }
  
-.login {
-  display: flex;
-  color: #fff;
-  font-size: 15px;
-  margin-top: 15rpx;
-  justify-content: center;
-}
+/* user.wxss */

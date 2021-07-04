@@ -1,0 +1,20 @@
+<view wx:for="{{zong}}" wx:key="costlist">
+  <view>
+    <view>书名：{{item.bookname}}</view>
+    <view>书的编号：{{item.booknum}}</view>
+    <view>联系方式：{{item.connect}}</view>
+    <view>交易方式：{{item.getfangshi}}</view>
+    <view>价格：{{item.price}}</view>
+    <view>科目：{{item.subject}}</view>
+    <view>时间：{{item.time}}</view>
+    
+  </view>
+</view>
+
+<scroll-view scroll-y="true" style="height: 500rpx;">
+  <view class="scroll-y" >
+    <view wx:for-items="{{scrolls}}" wx:key="name">
+      <view class="{{item.tag}}">{{item.name}}</view>
+    </view>
+  </view>
+</scroll-view>

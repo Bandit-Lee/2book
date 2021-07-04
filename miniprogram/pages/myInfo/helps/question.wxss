@@ -1,0 +1,17 @@
+
+/* pages/question.wxss */
+
+.divLineX{
+  background: #dadeeb;
+  width: 100%;
+  height: 2rpx;
+}
+.title
+{
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.body
+{
+  font-size: 35rpx;
+}

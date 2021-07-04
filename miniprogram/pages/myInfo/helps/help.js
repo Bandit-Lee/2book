@@ -1,3 +1,4 @@
+// pages/user/user.js
 var _app = getApp()
 Page({
   /**
@@ -5,11 +6,10 @@ Page({
    */
   data: {
     menuitems: [
-      { text: '我的订单', url: '../myInfo/myorders/myorder', icon: '../../images/我的订单.png', tips: '', arrows: '/../../images/向右.png' },
-      { text: '我的发布', url: '../myInfo/mycommits/mycommit', icon: '../../images/我的发布.png', tips: '', arrows: '../../images/向右.png' },
-      { text: '帮助说明', url: '../myInfo/helps/help', icon: '../../images/帮助.png', tips: '', arrows: '../../images/向右.png' }
-    ],
-    userInfo:''
+      { text: '常见问题', url: '../helps/question', icon: '../images/问题.png', tips: '', arrows: '../../pages/images/向右.png' },
+      { text: '意见反馈', url: '../helps/feedback', icon: '../images/意见反馈.png', tips: '', arrows: '../../pages/images/向右.png' }
+ 
+    ]
   },
   /**
    * 生命周期函数--监听页面加载
@@ -29,10 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      userInfo: wx.getStorageSync('user')
-    })
-    console.log(this.data.userInfo)
+    
   },
  
   /**

@@ -1,0 +1,22 @@
+/* pages/feedback.wxss */
+page{
+  background-color: #f3e3e3;
+}
+
+button{
+  margin-top: 60rpx;
+  background-color: #353331;
+  color: #fff;
+}
+
+.body image
+{
+  width: 100px;
+  height: 120px;
+  margin-left: 110px;
+}
+.t
+{
+  font-size: 15px;
+
+}

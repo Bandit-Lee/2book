@@ -1,0 +1,15 @@
+<button size="mini" type="default" bindtap="onQuery">查询记录</button>
+<view class='mycommits' wx:if="{{queryResult}}">
+  <view wx:for="{{queryResult}}">
+     <image src="{{item.imgurl}}"></image>
+     <text>书名：{{item.bookname}}\n</text>
+     <text>数量：{{item.booknum}}\n</text>
+     <text>类别：{{item.subject}}\n</text>
+     <text>发布时间：{{item.time}}\n\n</text>
+   
+  </view>
+</view>
+
+<view wx:else>
+  <text>无发布记录！</text>
+</view>
