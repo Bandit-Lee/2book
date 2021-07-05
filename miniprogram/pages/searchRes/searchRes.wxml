@@ -6,7 +6,7 @@
     <view class="weui-search-bar__box">
       <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
       <input type="text" bindinput="feedBackInput" class="weui-search-bar__input" focus='{true}'
-        placeholder="绿书，搜你想要的书!" />
+        placeholder="绿书，搜你想要的书!" value="{{searchKey}}"/>
     </view>
   </view>
   <!-- 搜索按钮,调用搜索查询方法 -->
@@ -14,6 +14,17 @@
 </view>
 
 <!-- 搜索结果展示区 -->
+<view wx:if="{{searchHistory.length!==0}}" class="history">
+  <view class="top">
+    <text class="tip">历史搜索</text>
+    <image src="../../images/删除.png" class="delete-icon" bindtap="delete"></image>
+  </view>
+  <view class="history-list">
+    <view wx:for="{{searchHistory}}" wx:key="key">
+      <text class="history_item" data-item="{{item}}" bindtap="historySearch">{{item}}</text>
+    </view>
+  </view>
+</view>
 <view wx:if="{{search_list.length==0}}">
   <view>
     <image class="noResult" src='../../images/暂无内容.png' mode='widthFix'

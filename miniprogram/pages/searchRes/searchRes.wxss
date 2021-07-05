@@ -80,3 +80,29 @@ page{
 .price{
   color: red;
 }
+.history{
+  background-color:white;
+}
+.top{
+  display: flex;
+  padding-top: 10rpx;
+}
+
+.delete-icon{
+  margin-left: 550rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.history-list{
+  display: flex;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.history_item{
+  background-color: #eee;
+  border-radius: 10rpx;
+  padding: 10rpx;
+  margin-left: 10rpx;
+}
