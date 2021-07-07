@@ -41,6 +41,7 @@
             <image src='{{item}}' mode='widthFix'></image>
           </view>
           <text>{{item.bookname}}</text>
+          <view class="price">￥{{item.price}}</view>
         </view>
       </view>
     </view>
