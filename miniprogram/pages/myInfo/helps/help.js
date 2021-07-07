@@ -6,8 +6,8 @@ Page({
    */
   data: {
     menuitems: [
-      { text: '常见问题', url: '../helps/question', icon: '../images/问题.png', tips: '', arrows: '../../pages/images/向右.png' },
-      { text: '意见反馈', url: '../helps/feedback', icon: '../images/意见反馈.png', tips: '', arrows: '../../pages/images/向右.png' }
+      { text: '常见问题', url: '../helps/question', icon: '../../../images/问题.png', tips: '', arrows: '../../../images/向右.png' },
+      { text: '意见反馈', url: '../helps/feedback', icon: '../../../images/意见反馈.png', tips: '', arrows: '../../../images/向右.png' }
  
     ]
   },

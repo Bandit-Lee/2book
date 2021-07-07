@@ -3,7 +3,7 @@
     <view class="wrap">
         <form bindsubmit="formSubmit">
         <view class="body">
-        <image src="../pages/images/反馈.png"></image>     
+        <image src="../../../images/反馈.png"></image>     
         </view>   
           <text class="t">
             为了带给您更好的体验,期待您的任何反馈,我们将会不断改进

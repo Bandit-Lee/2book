@@ -4,7 +4,7 @@
   <view class="jiemian-wrapper">
     <view>
       <view class="jiemian">
-      <image src="../miniprogram/images/帮助.png"></image>
+      <image src="../../../images/帮助大.png"></image>
     </view>
     </view>
   </view>
