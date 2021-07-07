@@ -21,7 +21,7 @@ Page({
         buy_openid:wx.getStorageSync('openid')
       },
       success:function(res){
-        console.log(that.data.id)
+        //console.log(that.data.id)
         that.fresh();
       }
     })
@@ -91,7 +91,7 @@ Page({
     this.setData({
         id:prepage.data.book_id,
     })
-    console.log(this.data.id)
+    //console.log(this.data.id)
     let that = this;
     wx.cloud.callFunction({
       name:'funcquery',
@@ -101,7 +101,7 @@ Page({
         })
         that.data.zong2.forEach(function(item){
           if(item._id==that.data.id){
-            console.log(item.buystatus)
+            //console.log(item.buystatus)
             if(item.bookstatus=="notbuy"){
               that.setData({
                 buy_info:"购买"
@@ -114,7 +114,7 @@ Page({
             }
           }
         })
-        console.log(that.data.zong2)
+        //console.log(that.data.zong2)
       },fail:function(res){
         console.log(res)
       }
