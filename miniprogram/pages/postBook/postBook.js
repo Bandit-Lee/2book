@@ -3,6 +3,7 @@ var utils = require('../postBook/util.js');
 const db = wx.cloud.database();
 Page({
   data: {
+    selector: '计算机',
     bookstatus: 'notbuy',
     again: true,
     connect:'',
