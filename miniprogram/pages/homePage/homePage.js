@@ -39,7 +39,7 @@ Page({
         that.setData({
           zong:res.result.data,
         })
-        console.log(res.result.data)
+        //console.log(res.result.data)
       },fail:function(res){
         console.log(res)
       }

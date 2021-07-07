@@ -3,9 +3,11 @@
   <view class='item-masonry'>
     <view wx:for="{{zong2}}" wx:key="key" class="product">
       <view wx:if="{{item._id==id}}">
-        <swiper style="height:500rpx" indicator-dots="true">
-          <swiper-item wx:for="{{item.imgurl}}" wx:key="key" class="img" style="height:500rpx">
-            <image src='{{item}}' mode='widthFix'></image>
+        <swiper style="height:700rpx" indicator-dots="true">
+          <swiper-item wx:for="{{item.imgurl}}" wx:key="key">
+            <view class="img">
+              <image src='{{item}}' mode="widthFix"></image>
+            </view>
           </swiper-item>
         </swiper>
         <view class="info">
@@ -15,6 +17,7 @@
           <view class="price">￥{{item.price}}</view>
           <view>取货方式：{{item.getfangshi}}</view>
           <view>联系方式：{{item.connect}}</view>
+          <view>出售本数：{{item.booknum}}</view>
         </view>
       </view>
     </view>
